@@ -826,6 +826,9 @@ body {
   display: block;
   height: 0;
 }
+#nexmoe-header .nexmoe-avatar:hover {
+  transform: rotate(360deg);
+}
 #nexmoe-header .nexmoe-count {
 /* padding: 0 30px;
         margin-bottom: 30px;

@@ -31,9 +31,9 @@ zh-CN"
 <meta name="twitter:card" content="summary">
                             <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233"
                                 crossorigin>
-                            <link rel="stylesheet" href="/css/style.css?v=1629441070073">
+                            <link rel="stylesheet" href="/css/style.css?v=1639558041842">
                                 
-                                        <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1629441070073">
+                                        <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1639558041842">
         <meta name="generator" content="Hexo 5.4.0"></head>
 
         <body class="mdui-drawer-body-left">
@@ -102,13 +102,29 @@ zh-CN"
     
         <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-search">
-         
+        <!--  
             <form id="search_form" action_e="https://www.so.com/s?ie=utf-8&amp;src=360se7_addr&amp;q=" onsubmit="return search();">
                 <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
             </form>
-         
+          -->
+        <div class="card-widget card-clock">
+            <div class="card-glass">
+                <div class="card-background">
+                    <div class="card-content">
+                        <div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<style>
+    .card-background {
+        border-radius: 8px;
+        box-shadow: inset 3px 3px 18px 0 rgb(50 50 50 / 40%);
+        z-index: 2;
+    }
+</style>
             
         <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-social">
@@ -217,23 +233,23 @@ zh-CN"
       <ul>
         
           <li>
-            <a href="/2021/08/18/cksjz53q80009e8v0e7tvcp3y/">JS相关技巧</a>
+            <a href="/2021/08/18/ckx7aix6h0004k0v0gb8wgixc/">JS相关技巧</a>
           </li>
         
           <li>
-            <a href="/2021/08/09/cksjz53rj001je8v0hkvh62ni/">日记/2021/08/09</a>
+            <a href="/2021/08/09/ckx7aix7n001lk0v0chvrg735/">日记/2021/08/09</a>
           </li>
         
           <li>
-            <a href="/2021/08/07/cksjz53rg001ee8v09ds72ex0/">日记/2021/08/07</a>
+            <a href="/2021/08/07/ckx7aix7j001dk0v0fl5s3bvo/">日记/2021/08/07</a>
           </li>
         
           <li>
-            <a href="/2021/08/06/cksjz53q70008e8v0f5tc40ad/">K12时代落幕后，请不要忘记关注千万教培淘金者去往何处</a>
+            <a href="/2021/08/06/ckx7aix6m0007k0v07ipbdhpo/">K12时代落幕后，请不要忘记关注千万教培淘金者去往何处</a>
           </li>
         
           <li>
-            <a href="/2021/08/06/cksjz53rf001be8v002s85455/">日记/2021/08/06</a>
+            <a href="/2021/08/06/ckx7aix7h001ak0v0fpdq4clt/">日记/2021/08/06</a>
           </li>
         
       </ul>
@@ -303,7 +319,7 @@ zh-CN"
                         <section class="nexmoe-posts">
     
         <div class="nexmoe-post">
-            <a href="/2021/08/18/cksjz53q80009e8v0e7tvcp3y/">
+            <a href="/2021/08/18/ckx7aix6h0004k0v0gb8wgixc/">
                 
                         <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;">
                             <img data-src="https://wen-major.github.io/images/default.jpg" data-sizes="auto" alt="JS相关技巧" class="lazyload">
@@ -322,32 +338,19 @@ zh-CN"
 
             <article>
                 
-                            <h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><h3 id="随意修改网页js代码"><a href="#随意修改网页js代码" class="headerlink" title="随意修改网页js代码"></a>随意修改网页js代码</h3><pre><code>document.body.contentEditable=&quot;true&quot;  
+                    <h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><h3 id="随意修改网页js代码"><a href="#随意修改网页js代码" class="headerlink" title="随意修改网页js代码"></a>随意修改网页js代码</h3><pre><code>document.body.contentEditable=&quot;true&quot;  
  document.designMode=&quot;on&quot;
 </code></pre>
 <p>或  </p>
 <pre><code>javascript:document.body.contentEditable=&#39;true&#39;; document.designMode=&#39;on&#39;; void 0
 （浏览器输入框执行，chrome需要粘贴后，需要在前面手打javascript:  因为粘贴的会自动过滤）
 </code></pre>
-<h3 id="复制百度文库中所有内容"><a href="#复制百度文库中所有内容" class="headerlink" title="复制百度文库中所有内容"></a>复制百度文库中所有内容</h3><pre><code>  var box = document.getElementsByClassName(&quot;ie-fix&quot;);  
-   for(var i=0;i&lt;box.length;i++)
-    &#123;
-        console.log(box[i].innerText);
-    &#125;  
-</code></pre>
-<h2 id="电脑"><a href="#电脑" class="headerlink" title="电脑"></a>电脑</h2><h3 id="利用cmd向内网用户发送消息"><a href="#利用cmd向内网用户发送消息" class="headerlink" title="利用cmd向内网用户发送消息"></a>利用cmd向内网用户发送消息</h3><pre><code>Msg /server:127.0.0.1 * &quot;你好，局域网用户！&quot;
-</code></pre>
-<h3 id="关于-Google-Chrome-中的全屏模式和-APP-模式"><a href="#关于-Google-Chrome-中的全屏模式和-APP-模式" class="headerlink" title="关于 Google Chrome 中的全屏模式和 APP 模式"></a>关于 Google Chrome 中的全屏模式和 APP 模式</h3><ul>
-<li>默认全屏打开一个网页呢，只需要在快捷方式中加上 –kiosk [url] 就可以了</li>
-<li>APP 模式的参数相对通俗易懂一些，在快捷方式后面追加 –app=[url] 即可</li>
-</ul>
-
-                                
+                        
             </article>
         </div>
         
         <div class="nexmoe-post">
-            <a href="/2021/08/04/cksjz53pw0002e8v0hyej4qx8/">
+            <a href="/2021/08/04/ckx7aix6c0002k0v05k3j148w/">
                 
                     <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: NaN%;">
                         <img data-src="https://wen-major.github.io/images/002.jpg" data-sizes="auto" alt="综合素质-第一章：职业理念" class="lazyload">
@@ -400,7 +403,7 @@ zh-CN"
 
  
 
-<script async src="/js/app.js?v=1629441070074"></script>
+<script async src="/js/app.js?v=1639558041843"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
